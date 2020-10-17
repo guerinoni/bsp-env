@@ -13,3 +13,7 @@ docker build --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" -t 
 ```
 docker run -it -v $(pwd):/home bsp-env
 ```
+
+## Contributing
+
+Feel free to fix/improve or suggest.
