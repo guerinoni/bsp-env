@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build bsp-env-18.04
+      run: docker build --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" -t bsp-env-18.04 -f bsp-18.04 .
+    
+    - name: Build bsp-env-20.04
+      run: docker build --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" -t bsp-env-20.04 -f bsp-20.04 .
