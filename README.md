@@ -1,4 +1,5 @@
 # bsp-env
+![Build](https://github.com/guerinoni/bsp-env/workflows/Build/badge.svg)
 
 This repo allows to create a docker container for BSP development based on Ubuntu with Yocto or Buildroot.
 
