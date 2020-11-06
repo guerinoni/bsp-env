@@ -10,6 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Build bsp-env-16.04
+      run: docker build --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" -t bsp-env-16.04 -f bsp-16.04 .
+
     - name: Build bsp-env-18.04
       run: docker build --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" -t bsp-env-18.04 -f bsp-18.04 .
     
